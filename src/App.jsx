@@ -39,7 +39,7 @@ export default function App() {
     reader.onload = async (e) => {
       try {
         const data = JSON.parse(e.target.result);
-        const response = await axios.post('http://localhost:5000/api/analyze', { data: data.data });
+        const response = await axios.post('https://k-b.vercel.app/api/analyze', { data: data.data });
         setResult(response.data);
       } catch (error) {
         console.error('Error:', error);
